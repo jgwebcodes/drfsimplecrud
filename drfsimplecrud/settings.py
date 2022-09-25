@@ -9,8 +9,6 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-
-from email.policy import default
 from pathlib import Path
 import os
 import dj_database_url
@@ -99,7 +97,7 @@ WSGI_APPLICATION = 'drfsimplecrud.wsgi.application'
 # DATABASES CONFIG FOR PROD
 DATABASES = {
     'default': dj_database_url.config(
-        default='sqlite:///db.sqlite',
+        default='sqlite:///db.sqlite3',
         conn_max_age=600
     )
 }
